@@ -1,5 +1,7 @@
+import Error from '../assets/error.svg';
+
 const NotFoundPage = () => (
-    <h1>404: Page Not Found!</h1>
+    <img src={Error} alt="not found image" />
   )
 
 export default NotFoundPage;
