@@ -1,12 +1,12 @@
 const CommentsList = ({ comments }) => 
   (
     <>
-    <h3>Comments:</h3>
-    {comments.map(comment => (
-      <div className="comment" key={comment.postedBy + ':' + comment.text}>
-        <h4>{comments.postedBy}</h4>
-        <p>{comment.text}</p>
-      </div>
+     <h3>Comments:</h3>
+    {comments.map((comment, key) => (
+        <div className="comment" key={key}>
+            <h4>{comment.postedBy}</h4>
+            <p>{comment.text}</p>
+        </div>
     ))}
     </>
   )
