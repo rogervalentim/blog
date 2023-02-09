@@ -1,19 +1,17 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { 
-  HomePage, 
-  AboutPage, 
-  ArticlePage, 
-  ArticlesListPage
-} 
-from './pages';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ArticlePage from './pages/ArticlePage';
+import ArticlesListPage from './pages/ArticlesListPage';
 
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar'
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
+    <>
     <BrowserRouter>
     <div className="App">
       <Navbar />
@@ -28,6 +26,7 @@ function App() {
       </div>
     </div>
     </BrowserRouter>
+    </>
   );
 }
 
