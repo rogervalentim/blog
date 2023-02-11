@@ -9,7 +9,6 @@ import LoginPage from './pages/LoginPage';
 import CreateAccountPage from './pages/CreateAccountPage';
 
 import Navbar from './components/Navbar'
-import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
