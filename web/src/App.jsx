@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
@@ -8,14 +7,14 @@ import ArticlesListPage from './pages/ArticlesListPage';
 import LoginPage from './pages/LoginPage';
 import CreateAccountPage from './pages/CreateAccountPage';
 
-import Navbar from './components/Navbar'
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <>
     <BrowserRouter>
     <div className="App">
-      <Navbar />
+      <NavBar />
       <div id="page-body">
         <Routes>
         <Route path="/" element={<HomePage />} />

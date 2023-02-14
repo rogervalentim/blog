@@ -63,16 +63,21 @@ const ArticlePage = () => {
       <h1>{article.title}</h1>
       <div className="upvotes-section">
         {user ? (
-          <button onClick={addUpvote}>{canUpvote ? 'Upvote' : 'Already Upvoted'}</button>
+          <button 
+          className="bg-black text-white w-[140px] h-[40px] rounded-lg"
+          onClick={addUpvote}>{canUpvote ? 'Upvote' : 'Already Upvoted'}
+          </button>
         ) : (
-          <button onClick={() => {
+          <button 
+          className="bg-black text-white w-[100px] rounded-lg"
+          onClick={() => {
             navigate('/login')
           }}>Log in to upvote</button>
         )}
         <p>This article has {articleInfo.upvotes} upvote(s)</p>
       </div>
       {article.content.map((paragraph, i) => (
-        <p key={i}>{paragraph}</p>
+        <p className="indent-8 text-center" key={i}>{paragraph}</p>
       ))}
       {user ? (
         <AddCommentForm
@@ -80,7 +85,7 @@ const ArticlePage = () => {
           onArticleUpdated={(updateArticle) => setArticleInfo(updateArticle)}
         />
       ) : (
-        <button>Log in to add a comment</button>
+        <button >Log in to add a comment</button>
       )}
       <CommentsList comments={articleInfo.comments} />
     </>
