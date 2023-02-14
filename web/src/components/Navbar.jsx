@@ -16,7 +16,7 @@ export default function NavBar({ fixed }) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <a className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black">
-              Blog Roger
+            Blog Roger
             </a>
             <button
               className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -38,7 +38,7 @@ export default function NavBar({ fixed }) {
                   className="px-3 py-2 flex items-center text-xs  font-bold leading-snug text-white hover:opacity-75"
                   to="/"
                 >
-                  <span className="ml-2 text-black">Home</span>
+                  <span className="ml-2 text-sm text-gray-700">Home</span>
                 </Link>
               </li>
               <li className="nav-item">
@@ -46,7 +46,7 @@ export default function NavBar({ fixed }) {
                   className="px-3 py-2 flex items-center text-xs  font-bold leading-snug text-white hover:opacity-75"
                   to="/about"
                 >
-                  <span className="ml-2 text-black">About</span>
+                  <span className="ml-2 text-sm text-gray-700">About</span>
                 </Link>
               </li>
               <li className="nav-item">
@@ -54,7 +54,7 @@ export default function NavBar({ fixed }) {
                   className="px-3 py-2 flex items-center text-xs font-bold leading-snug text-black hover:opacity-75"
                   to="/articles"
                 >
-                  <span className="ml-2 text-black">Articles</span>
+                  <span className="ml-2 text-sm text-gray-700">Articles</span>
                 </Link>
               </li>
             </ul>
@@ -65,7 +65,7 @@ export default function NavBar({ fixed }) {
                     onClick={() => {
                       signOut(getAuth());
                     }}
-                    className="bg-[#dc3545] w-[100px] rounded-lg h-[30px] text-white "
+                    className="bg-[#dc3545] hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   >
                     Log Out
                   </button>

@@ -1,14 +1,15 @@
-const CommentsList = ({ comments }) => 
-  (
-    <>
-     <h3>Comments:</h3>
+const CommentsList = ({ comments }) => (
+  <>
+    <h3 className="text-black flex justify-center">Comments:</h3>
     {comments.map((comment, key) => (
-        <div className="comment" key={key}>
-            <h4>{comment.postedBy}</h4>
-            <p>{comment.text}</p>
+      <div className="flex justify-center">
+        <div className="flex flex-col w-[400px]" key={key}>
+          <label className="block text-gray-700 text-sm font-bold mb-2">{comment.postedBy}:</label>
+          <p className="border">{comment.text}</p>
         </div>
+      </div>
     ))}
-    </>
-  )
+  </>
+);
 
 export default CommentsList;

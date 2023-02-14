@@ -12,7 +12,11 @@ import AddCommentForm from "../components/AddCommentForm";
 import useUser from "../hooks/useUser";
 
 const ArticlePage = () => {
-  const [articleInfo, setArticleInfo] = useState({ upvotes: 0, comments: [], canUpvote: false });
+  const [articleInfo, setArticleInfo] = useState({
+    upvotes: 0,
+    comments: [],
+    canUpvote: false
+  });
   const { canUpvote } = articleInfo;
   const { articleId } = useParams();
 
@@ -33,7 +37,6 @@ const ArticlePage = () => {
     if (isLoading) {
       loadArticleInfo();
     }
-
   }, [isLoading, user]);
 
   const article = articles.find((article) => article.name === articleId);
@@ -60,32 +63,44 @@ const ArticlePage = () => {
 
   return (
     <>
-      <h1>{article.title}</h1>
-      <div className="upvotes-section">
+      <h1 className="flex justify-center text-black text-[30px]">
+        {article.title}
+      </h1>
+      <div className="flex justify-center mt-[20px]">
         {user ? (
-          <button 
-          className="bg-black text-white w-[140px] h-[40px] rounded-lg"
-          onClick={addUpvote}>{canUpvote ? 'Upvote' : 'Already Upvoted'}
+          <button
+            className="bg-black text-white w-[140px] h-[40px] rounded-lg"
+            onClick={addUpvote}
+          >
+            {canUpvote ? "Upvote" : "Already Upvoted"}
           </button>
         ) : (
-          <button 
-          className="bg-black text-white w-[100px] rounded-lg"
-          onClick={() => {
-            navigate('/login')
-          }}>Log in to upvote</button>
+          <button
+            className="bg-black text-white w-[100px] rounded-lg"
+            onClick={() => {
+              navigate("/login");
+            }}
+            type="button"
+          >
+            Log in to upvote
+          </button>
         )}
-        <p>This article has {articleInfo.upvotes} upvote(s)</p>
+        <p className="mt-[10px]">This article has {articleInfo.upvotes} upvote(s)</p>
       </div>
-      {article.content.map((paragraph, i) => (
-        <p className="indent-8 text-center" key={i}>{paragraph}</p>
-      ))}
+      <div className="flex justify-center mt-[50px]">
+        {article.content.map((paragraph, i) => (
+          <p className="text-center w-[450px]" key={i}>
+            {paragraph}
+          </p>
+        ))}
+      </div>
       {user ? (
         <AddCommentForm
           articleName={articleId}
           onArticleUpdated={(updateArticle) => setArticleInfo(updateArticle)}
         />
       ) : (
-        <button >Log in to add a comment</button>
+        <button>Log in to add a comment</button>
       )}
       <CommentsList comments={articleInfo.comments} />
     </>

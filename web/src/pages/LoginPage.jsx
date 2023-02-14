@@ -20,26 +20,30 @@ const LoginPage = () => {
 
   return (
     <>
-      <h1 className="flex justify-center text-black text-xl font-bold mt-[50px]">
-        Create Account
+      <h1 className="flex justify-center text-black font-bold text-xl">
+        Login
       </h1>
       <div className="flex justify-center">
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           {error && <p className="error">{error}</p>}
+
           <label className="block text-gray-700 text-sm font-bold mb-2">
             Email:
           </label>
+
           <input
-            className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Your email anddress"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+
           <label className="block text-gray-700 text-sm font-bold mb-2">
             Password:
           </label>
+
           <input
-            className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             type="password"
             placeholder="Your Password"
             value={password}
@@ -47,8 +51,9 @@ const LoginPage = () => {
           />
 
           <button
-            onClick={logIn}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            onClick={logIn}
+            type="button"
           >
             Log In
           </button>
