@@ -80,7 +80,7 @@ export default function NavBar({ fixed }) {
                       Log In
                     </button>
                     <button
-                      className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:shadow-outline"
+                      className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:shadow-outline mx-2"
                       onClick={() => {
                         navigate("/create-account");
                       }}

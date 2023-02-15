@@ -26,10 +26,8 @@ const CreateAccountPage = () => {
 
   return (
     <>
-      <h1 className="flex justify-center text-black font-bold text-xl">
-        Create Account
-      </h1>
-      {error && <p>{error}</p>}
+      <h1 className="flex justify-center text-black font-semibold text-4xl">Create Account</h1>
+      {error && <p className="bg-red-400 text-black flex justify-center ">{error}</p>}
       <div className="flex justify-center">
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2">

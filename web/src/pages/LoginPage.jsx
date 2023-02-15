@@ -20,9 +20,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <h1 className="flex justify-center text-black font-bold text-xl">
-        Login
-      </h1>
+      <h1 className="flex justify-center text-black font-semibold text-4xl">Login</h1>
       <div className="flex justify-center">
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           {error && <p className="error">{error}</p>}

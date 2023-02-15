@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import articles from "./article-content";
 
@@ -100,11 +100,10 @@ const ArticlePage = () => {
           onArticleUpdated={(updateArticle) => setArticleInfo(updateArticle)}
         />
       ) : (
-        <a 
+        <Link
         className="mx-24 px-2 cursor-pointer underline font-bold"
-        onClick={() => {
-          navigate="/login"
-        }}>Log in to add a comment</a>
+        to='/login'
+        >Log in to add a comment</Link>
       )}
       <CommentsList comments={articleInfo.comments} />
     </>

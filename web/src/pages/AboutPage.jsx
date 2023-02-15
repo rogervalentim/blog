@@ -1,8 +1,13 @@
+import About from '../assets/about.jpg'
+
 const AboutPage = () => {
   return (
     <section className="grid h-screen place-items-center">
       <h1 className=" text-black font-semibold text-4xl">About me!</h1>
       <div className="mx-24">
+      <div className="flex justify-center mt-2">
+        <img className="w-[400px] rounded" src={About} alt="about me" />
+      </div>
         <p className="p-4 text-justify mt-2">
           Welcome to my blog! Proin congue ligula id risus posuere, vel eleifend
           ex egestas. Sed in turpis leo. Aliquam malesuada in massa tincidunt
