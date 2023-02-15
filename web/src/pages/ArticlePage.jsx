@@ -63,7 +63,7 @@ const ArticlePage = () => {
 
   return (
     <>
-      <h1 className="flex justify-center text-black text-[30px]">
+      <h1 className="flex justify-center text-black  text-[30px]">
         {article.title}
       </h1>
       <div className="flex justify-center mt-[20px]">

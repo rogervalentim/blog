@@ -28,7 +28,7 @@ const AddCommentForm = ({ articleName, onArticleUpdated }) => {
 
   return (
     <>
-      <h3 className="flex justify-center text-black mt-[50px]">
+      <h3 className="flex justify-center font-bold text-black mt-[50px]">
         Add a Comment
       </h3>
       <div className="flex justify-center">

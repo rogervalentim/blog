@@ -69,7 +69,9 @@ const CreateAccountPage = () => {
           >
             Create Account
           </button>
-          <Link to="/login">Already have an account? Log in here</Link>
+          <Link 
+          className="mx-2 underline"
+          to="/login">Already have an account? Log in here</Link>
         </form>
       </div>
     </>

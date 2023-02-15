@@ -55,7 +55,9 @@ const LoginPage = () => {
           >
             Log In
           </button>
-          <Link to="/create-account">
+          <Link 
+          className="mx-2 underline"
+          to="/create-account">
             Don't have an account? Create one here!
           </Link>
         </form>

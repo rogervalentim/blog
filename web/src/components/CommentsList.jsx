@@ -1,6 +1,6 @@
 const CommentsList = ({ comments }) => (
   <>
-    <h3 className="text-black flex justify-center">Comments:</h3>
+    <h3 className="text-black font-semibold flex justify-center">Comments:</h3>
     {comments.map((comment, key) => (
       <div className="flex justify-center">
         <div className="flex flex-col w-[400px]" key={key}>
