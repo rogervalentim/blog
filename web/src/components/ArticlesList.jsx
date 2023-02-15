@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 
-const ArticlesList = ({ articles }) => {
-  return (
-    <div className="flex flex-col justify-center">
+const ArticlesList = ({ articles }) => (
+    <div className="flex flex-col">
       {articles.map((article) => (
         <Link
           key={article.name}
@@ -15,6 +14,5 @@ const ArticlesList = ({ articles }) => {
       ))}
     </div>
   );
-};
 
 export default ArticlesList;

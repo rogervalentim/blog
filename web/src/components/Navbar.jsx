@@ -16,7 +16,7 @@ export default function NavBar({ fixed }) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <a className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black">
-            Blog Roger
+              Blog Roger
             </a>
             <button
               className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -70,14 +70,24 @@ export default function NavBar({ fixed }) {
                     Log Out
                   </button>
                 ) : (
-                  <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                    onClick={() => {
-                      navigate("/login");
-                    }}
-                  >
-                    Log In
-                  </button>
+                  <div className="mx-2">
+                    <button
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      onClick={() => {
+                        navigate("/login");
+                      }}
+                    >
+                      Log In
+                    </button>
+                    <button
+                      className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:shadow-outline"
+                      onClick={() => {
+                        navigate("/create-account");
+                      }}
+                    >
+                      Sign Up
+                    </button>
+                  </div>
                 )}
               </li>
             </ul>

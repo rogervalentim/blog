@@ -76,7 +76,7 @@ const ArticlePage = () => {
           </button>
         ) : (
           <button
-            className="bg-black text-white w-[100px] rounded-lg"
+            className="bg-black text-white w-[140px] h-[40px] rounded-lg"
             onClick={() => {
               navigate("/login");
             }}
@@ -87,9 +87,9 @@ const ArticlePage = () => {
         )}
         <p className="mt-[10px]">This article has {articleInfo.upvotes} upvote(s)</p>
       </div>
-      <div className="flex justify-center mt-[50px]">
+      <div className="mx-24 mt-[50px]">
         {article.content.map((paragraph, i) => (
-          <p className="text-center w-[450px]" key={i}>
+          <p className="p-4 text-justify" key={i}>
             {paragraph}
           </p>
         ))}
@@ -100,7 +100,11 @@ const ArticlePage = () => {
           onArticleUpdated={(updateArticle) => setArticleInfo(updateArticle)}
         />
       ) : (
-        <button>Log in to add a comment</button>
+        <a 
+        className="mx-24 px-2 cursor-pointer underline font-bold"
+        onClick={() => {
+          navigate="/login"
+        }}>Log in to add a comment</a>
       )}
       <CommentsList comments={articleInfo.comments} />
     </>
