@@ -34,12 +34,13 @@ const ArticlePage = () => {
       setArticleInfo(newArticleInfo);
     };
 
-    if (isLoading) {
+    if (!isLoading) {
       loadArticleInfo();
     }
   }, [isLoading, user]);
 
   const article = articles.find((article) => article.name === articleId);
+  console.log(article)
 
   const addUpvote = async () => {
     try {
