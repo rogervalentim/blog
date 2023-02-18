@@ -1,5 +1,5 @@
 <div align="center">
-<h1>🈸 Hábitos</h1>
+<h1>👨‍💻 Blog</h1>
 </div>
 
 <div align="center">
@@ -41,8 +41,7 @@ npm start
 ```
 
 <h1><a href="">Clique aqui e veja em breve</a></h1>
-
-<h1>Tecnologias</h1>
+          
 
 ### 📝 Resumo
 
