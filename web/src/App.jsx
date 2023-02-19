@@ -11,7 +11,7 @@ import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <>
+    <div className="dark:bg-slate-900">
     <BrowserRouter>
       <NavBar />
         <Routes>
@@ -23,7 +23,7 @@ function App() {
         <Route path="/create-account" element={<CreateAccountPage />} />
         </Routes>
     </BrowserRouter>
-    </>
+    </div>
   );
 }
 
