@@ -1,22 +1,36 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import useUser from "../hooks/useUser";
 
+
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BsFillMoonStarsFill } from "react-icons/bs";
 
 export default function NavBar({ fixed }) {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [theme, setTheme] = useState("light");
+  const [navbarOpen, setNavbarOpen] = useState(false);
   const { user } = useUser();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 border-b border-b-[#e6ebf4] mb-3">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <h1 className="text-[#010101] text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase">
-            My  Blog 
+              My Blog
             </h1>
             <button
               className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -91,6 +105,9 @@ export default function NavBar({ fixed }) {
                 )}
               </li>
             </ul>
+          <button onClick={handleThemeSwitch}>
+            <BsFillMoonStarsFill className="mx-2"  />
+            </button>
           </div>
         </div>
       </nav>
