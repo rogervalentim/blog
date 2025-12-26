@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const Header = () => {
   return (
@@ -22,20 +23,20 @@ export const Header = () => {
 
         <ul className="hidden lg:flex items-center gap-[26px]">
           <li>
-            <a
-              href="#"
+            <Link
+              href="/"
               className="text-sm text-[#E9EAEC] font-medium hover:text-[#2C85FC]"
             >
               Início
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              href="/blog"
               className="text-sm text-[#E9EAEC] font-medium hover:text-[#2C85FC]"
             >
               Blog
-            </a>
+            </Link>
           </li>
           <li>
             <a
