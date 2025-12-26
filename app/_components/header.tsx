@@ -5,21 +5,25 @@ export const Header = () => {
   return (
     <header className="w-full flex items-center h-20 lg:h-24 border-[#16181D] border-b-[1.5px]">
       <nav className="w-full flex justify-between items-center px-[22px] lg:px-[200px] relative">
-        <Image
-          src="/logo.png"
-          alt="logo"
-          width={40}
-          height={41}
-          className="lg:hidden"
-        />
+        <Link href="/">
+          <Image
+            src="/logo.png"
+            alt="logo"
+            width={40}
+            height={41}
+            className="lg:hidden"
+          />
+        </Link>
 
-        <Image
-          src="/logo-big.png"
-          alt="logo"
-          width={115.61}
-          height={32.31}
-          className="hidden lg:block"
-        />
+        <Link href="/">
+          <Image
+            src="/logo-big.png"
+            alt="logo"
+            width={115.61}
+            height={32.31}
+            className="hidden lg:block"
+          />
+        </Link>
 
         <ul className="hidden lg:flex items-center gap-[26px]">
           <li>
@@ -39,12 +43,12 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              href="/blog"
               className="text-[#0B0C0F] font-medium bg-[#E9EAEC] flex justify-center items-center w-[93px] h-9 rounded-[999px]  hover:bg-[#7EA4D7] trasition-all"
             >
               Começar
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -71,12 +75,12 @@ export const Header = () => {
         <input type="checkbox" id="menu" className="peer hidden" />
 
         <div className="peer-checked:flex hidden flex-col gap-4 bg-[#16181D] absolute z-10 right-[22px] top-20 w-[200px] p-4 rounded-xl border border-[#2a2d35] lg:hidden">
-          <a className="text-[#E9EAEC] hover:text-[#2C85FC]" href="#">
+          <Link className="text-[#E9EAEC] hover:text-[#2C85FC]" href="/">
             Início
-          </a>
-          <a className="text-[#E9EAEC] hover:text-[#2C85FC]" href="#">
+          </Link>
+          <Link className="text-[#E9EAEC] hover:text-[#2C85FC]" href="/blog">
             Blog
-          </a>
+          </Link>
         </div>
       </nav>
     </header>
