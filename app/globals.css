@@ -8,3 +8,9 @@ body {
 .pt-sans {
   font-family: var(--font-pt-sans-caption);
 }
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
