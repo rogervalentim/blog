@@ -5,15 +5,13 @@ export const Header = () => {
   return (
     <header className="w-full flex items-center h-20 lg:h-24 border-[#16181D] border-b-[1.5px]">
       <nav className="w-full flex justify-between items-center px-[22px] lg:px-[200px] relative">
-        <Link href="/">
-          <Image
-            src="/logo.png"
-            alt="logo"
-            width={40}
-            height={41}
-            className="lg:hidden"
-          />
-        </Link>
+        <Image
+          src="/logo.png"
+          alt="logo"
+          width={40}
+          height={41}
+          className="lg:hidden"
+        />
 
         <Link href="/">
           <Image
