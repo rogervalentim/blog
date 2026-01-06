@@ -26,14 +26,17 @@ export const Articles = () => {
         />
       </Link>
 
-      <CardArticle
-        src="/blog/thumb/como-atrair-consumidores.png"
-        date="24/09/24"
-        title="Como atrair consumidores"
-        description="Atrair consumidores para sua loja online é uma das chaves para o sucesso no e-commerce. Para conquistar novos clientes, é essencial adotar estratégias eficazes de marketing e criar uma experiência de compra que os faça voltar. Aqui estão algumas dicas para aumentar o tráfego e a conversão na sua loja:"
-        peopleImage="/aspen-dokidis.png"
-        peopleName="Aspen Dokidis"
-      />
+      <Link href="/como-atrair-consumidores">
+        <CardArticle
+          src="/blog/thumb/como-atrair-consumidores.png"
+          date="24/09/24"
+          title="Como atrair consumidores"
+          description="Atrair consumidores para sua loja online é uma das chaves para o sucesso no e-commerce. Para conquistar novos clientes, é essencial adotar estratégias eficazes de marketing e criar uma experiência de compra que os faça voltar. Aqui estão algumas dicas para aumentar o tráfego e a conversão na sua loja:"
+          peopleImage="/aspen-dokidis.png"
+          peopleName="Aspen Dokidis"
+        />
+      </Link>
+
       <CardArticle
         src="/blog/thumb/crie-sua-loja-e-comece-a-vender.png"
         date="05/11/24"
