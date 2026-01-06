@@ -15,14 +15,17 @@ export const Articles = () => {
         />
       </Link>
 
-      <CardArticle
-        src="/blog/thumb/5-motivos-para-escolher-o-site-set.png"
-        date="10/11/24"
-        title="5 motivos para escolher o Site.Set"
-        description="O Site.Set oferece tudo o que você precisa para criar uma loja online eficiente e personalizada. Desde a integração com sistemas de pagamento até a criação de páginas de vendas, veja por que milhares de empreendedores escolhem nossa plataforma."
-        peopleImage="/dulce-westervelt.png"
-        peopleName="Dulce Westervelt"
-      />
+      <Link href="/5-motivos-para-escolher-o-site-set">
+        <CardArticle
+          src="/blog/thumb/5-motivos-para-escolher-o-site-set.png"
+          date="10/11/24"
+          title="5 motivos para escolher o Site.Set"
+          description="O Site.Set oferece tudo o que você precisa para criar uma loja online eficiente e personalizada. Desde a integração com sistemas de pagamento até a criação de páginas de vendas, veja por que milhares de empreendedores escolhem nossa plataforma."
+          peopleImage="/dulce-westervelt.png"
+          peopleName="Dulce Westervelt"
+        />
+      </Link>
+
       <CardArticle
         src="/blog/thumb/como-atrair-consumidores.png"
         date="24/09/24"

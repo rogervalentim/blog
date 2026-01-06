@@ -26,9 +26,9 @@ export const CardArticle = ({
         src={src}
         alt={title}
         height={144}
-        width={289}
+        width={342}
         quality={100}
-        className="w-full h-auto"
+        className="w-full h-auto rounded-md"
       />
       <h2 className="text-base font-bold pt-sans text-[#E9EAEC] mt-4">
         {title}
