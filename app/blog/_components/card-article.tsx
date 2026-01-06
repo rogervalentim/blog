@@ -18,7 +18,7 @@ export const CardArticle = ({
   peopleName
 }: CardArticleProps) => {
   return (
-    <div className="w-full h-full bg-[#14161A] overflow-hidden relative rounded-xl border border-[#20242C] p-2">
+    <div className="w-full h-full bg-[#14161A] hover:border hover:border-[#2266C1] overflow-hidden relative rounded-xl border border-[#20242C] p-2">
       <div className="absolute top-0 right-0 w-[75px] h-[34px] bg-[#14161A] rounded-bl-[10px] flex justify-center items-center">
         <p className="font-regular text-xs text-[#93979E]">{date}</p>
       </div>
@@ -27,6 +27,7 @@ export const CardArticle = ({
         alt={title}
         height={144}
         width={289}
+        quality={100}
         className="w-full h-auto"
       />
       <h2 className="text-base font-bold pt-sans text-[#E9EAEC] mt-4">

@@ -1,16 +1,20 @@
+import Link from "next/link";
 import { CardArticle } from "./card-article";
 
 export const Articles = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-[22px] lg:px-[200px] gap-6 pt-14 pb-[136px]">
-      <CardArticle
-        src="/blog/thumb/transformando-seu-negocio-em-uma-loja-virtual.png"
-        date="20/12/24"
-        title="Transformando seu negócio em uma loja virtual"
-        description="Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site.Set é a solução perfeita para você. Criar uma loja virtual de sucesso nunca foi tão fácil. Com nossa plataforma intuitiva, você pode criar um site profissional para sua loja em minutos, sem precisar de conhecimentos técnicos."
-        peopleImage="/aspen-dokidis.png"
-        peopleName="Aspen Dokidis"
-      />
+      <Link href="/transformando-seu-negocio-em-uma-loja-virtual">
+        <CardArticle
+          src="/blog/thumb/transformando-seu-negocio-em-uma-loja-virtual.png"
+          date="20/12/24"
+          title="Transformando seu negócio em uma loja virtual"
+          description="Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site.Set é a solução perfeita para você. Criar uma loja virtual de sucesso nunca foi tão fácil. Com nossa plataforma intuitiva, você pode criar um site profissional para sua loja em minutos, sem precisar de conhecimentos técnicos."
+          peopleImage="/aspen-dokidis.png"
+          peopleName="Aspen Dokidis"
+        />
+      </Link>
+
       <CardArticle
         src="/blog/thumb/5-motivos-para-escolher-o-site-set.png"
         date="10/11/24"
