@@ -1,8 +1,61 @@
+"use client";
+
+import { useState } from "react";
+
 export function LinksMobile() {
+  const [showToast, setShowToast] = useState(false);
+
+  const shareUrl = typeof window !== "undefined" ? window.location.href : "";
+
+  const showFeedback = () => {
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 2000);
+  };
+
+  const copyLink = async () => {
+    await navigator.clipboard.writeText(shareUrl);
+    showFeedback();
+  };
+
+  const nativeShare = async () => {
+    if (
+      typeof window !== "undefined" &&
+      typeof navigator !== "undefined" &&
+      navigator.share
+    ) {
+      await navigator.share({
+        url: shareUrl
+      });
+    } else {
+      await copyLink();
+    }
+  };
+
   return (
-    <div className="flex lg:hidden gap-2 items-center">
+    <div className="relative flex lg:hidden gap-2 items-center">
+      {showToast && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="
+            absolute -top-12 left-1/2 -translate-x-1/2 z-50
+            bg-white text-black
+            text-sm font-medium
+            px-4 py-2
+            rounded-md
+            shadow-lg
+          "
+        >
+          Link copiado!
+        </div>
+      )}
+
       <a
-        href=""
+        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+          shareUrl
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="h-10 w-10 rounded-md flex justify-center items-center border border-[#20242C]"
       >
         <svg
@@ -21,7 +74,11 @@ export function LinksMobile() {
         </svg>
       </a>
       <a
-        href=""
+        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+          shareUrl
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="h-10 w-10 rounded-md flex justify-center items-center border border-[#20242C]"
       >
         <svg
@@ -41,7 +98,11 @@ export function LinksMobile() {
       </a>
 
       <a
-        href=""
+        href={`https://slack.com/intl/pt-br/share?url=${encodeURIComponent(
+          shareUrl
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="h-10 w-10 rounded-md flex justify-center items-center border border-[#20242C]"
       >
         <svg
@@ -61,7 +122,7 @@ export function LinksMobile() {
       </a>
 
       <a
-        href=""
+        onClick={nativeShare}
         className="h-10 w-10 rounded-md flex justify-center items-center border border-[#20242C]"
       >
         <svg

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,13 +7,9 @@ export const Header = () => {
   return (
     <header className="w-full flex items-center h-20 lg:h-24 border-[#16181D] border-b-[1.5px]">
       <nav className="w-full flex justify-between items-center px-[22px] lg:px-[200px] relative">
-        <Image
-          src="/logo.png"
-          alt="logo"
-          width={40}
-          height={41}
-          className="lg:hidden"
-        />
+        <Link href="/" className="lg:hidden">
+          <Image src="/logo.png" alt="logo" width={40} height={41} />
+        </Link>
 
         <Link href="/">
           <Image
@@ -58,8 +56,14 @@ export const Header = () => {
             Começar
           </a>
 
-          <div className="h-9 w-9 opacity-100 rounded-[999px] bg-[#20242C] flex justify-center items-center">
-            <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+          <div className="h-9 w-9 rounded-full bg-[#20242C] flex justify-center items-center">
+            <svg
+              className="peer-checked:hidden block"
+              width="18"
+              height="14"
+              viewBox="0 0 18 14"
+              fill="none"
+            >
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
