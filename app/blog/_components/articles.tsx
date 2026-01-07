@@ -57,14 +57,16 @@ export const Articles = () => {
           peopleName="Cristofer Carder"
         />
       </Link>
-      <CardArticle
-        src="/blog/thumb/a-jornada-do-empreendedorismo.png"
-        date="01/12/24"
-        title="A jornada do empreendedorismo"
-        description="Empreendedores de todos os tamanhos confiam no Site.Set para lançar e gerenciar suas lojas online com facilidade. Descubra como nossa plataforma simplifica o processo de construção de sites e acelera o crescimento do seu negócio."
-        peopleImage="/martin-geidt.png"
-        peopleName="Martin Geidt"
-      />
+      <Link href="/a-jornada-do-empreendedorismo">
+        <CardArticle
+          src="/blog/thumb/a-jornada-do-empreendedorismo.png"
+          date="01/12/24"
+          title="A jornada do empreendedorismo"
+          description="Empreendedores de todos os tamanhos confiam no Site.Set para lançar e gerenciar suas lojas online com facilidade. Descubra como nossa plataforma simplifica o processo de construção de sites e acelera o crescimento do seu negócio."
+          peopleImage="/martin-geidt.png"
+          peopleName="Martin Geidt"
+        />
+      </Link>
     </section>
   );
 };
