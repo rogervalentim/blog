@@ -37,14 +37,16 @@ export const Articles = () => {
         />
       </Link>
 
-      <CardArticle
-        src="/blog/thumb/crie-sua-loja-e-comece-a-vender.png"
-        date="05/11/24"
-        title="Crie sua loja e comece a vender"
-        description="a criação de um e-commerce não precisa ser difícil. Desde o cadastro de produtos até o design da sua página, nossa plataforma oferece tudo o que você precisa para começar a vender de forma simples e prática."
-        peopleImage="/aspen-dokidis.png"
-        peopleName="Aspen Dokidis"
-      />
+      <Link href="/crie-sua-loja-e-comece-a-vender">
+        <CardArticle
+          src="/blog/thumb/crie-sua-loja-e-comece-a-vender.png"
+          date="05/11/24"
+          title="Crie sua loja e comece a vender"
+          description="a criação de um e-commerce não precisa ser difícil. Desde o cadastro de produtos até o design da sua página, nossa plataforma oferece tudo o que você precisa para começar a vender de forma simples e prática."
+          peopleImage="/aspen-dokidis.png"
+          peopleName="Aspen Dokidis"
+        />
+      </Link>
       <CardArticle
         src="/blog/thumb/as-vantagens-de-ter-uma-loja-online.png"
         date="02/10/24"
