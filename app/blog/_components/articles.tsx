@@ -47,14 +47,16 @@ export const Articles = () => {
           peopleName="Aspen Dokidis"
         />
       </Link>
-      <CardArticle
-        src="/blog/thumb/as-vantagens-de-ter-uma-loja-online.png"
-        date="02/10/24"
-        title="As vantagens de ter uma loja online"
-        description="Com a evolução digital, mais consumidores preferem fazer compras pela internet, o que torna fundamental para qualquer empreendedor ter uma presença online. Neste post, vamos explorar as principais vantagens de ter uma loja virtual e como ela pode impulsionar o seu sucesso no mercado."
-        peopleImage="/cristofer-carder.png"
-        peopleName="Cristofer Carder"
-      />
+      <Link href="/as-vantagens-de-ter-uma-loja-online">
+        <CardArticle
+          src="/blog/thumb/as-vantagens-de-ter-uma-loja-online.png"
+          date="02/10/24"
+          title="As vantagens de ter uma loja online"
+          description="Com a evolução digital, mais consumidores preferem fazer compras pela internet, o que torna fundamental para qualquer empreendedor ter uma presença online. Neste post, vamos explorar as principais vantagens de ter uma loja virtual e como ela pode impulsionar o seu sucesso no mercado."
+          peopleImage="/cristofer-carder.png"
+          peopleName="Cristofer Carder"
+        />
+      </Link>
       <CardArticle
         src="/blog/thumb/a-jornada-do-empreendedorismo.png"
         date="01/12/24"
