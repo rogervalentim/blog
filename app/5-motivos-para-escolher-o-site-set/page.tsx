@@ -44,7 +44,7 @@ export default function MotivosParaEscolherOSiteSet() {
         </div>
 
         <div className="flex gap-[23.5px]">
-          <article className="rounded-xl bg-[#14161A] border border-[#20242C] w-full max-w-[718px] opacity-100">
+          <article className="rounded-xl bg-[#14161A] border border-[#20242C] w-full opacity-100">
             <Image
               src={"/blog/big/5-motivos-para-escolher-o-site-set.png"}
               alt="5 motivos para escolher o Site.Set"

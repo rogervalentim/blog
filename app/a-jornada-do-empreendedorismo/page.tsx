@@ -44,9 +44,9 @@ export default function AJornadaDoEmpreendedorismo() {
         </div>
 
         <div className="flex gap-[23.5px]">
-          <article className="rounded-xl bg-[#14161A] border border-[#20242C] w-full max-w-[718px] opacity-100">
+          <article className="rounded-xl bg-[#14161A] border border-[#20242C] w-full  opacity-100">
             <Image
-              src={"/blog/big/as-vantagens-de-ter-uma-loja-online.png"}
+              src={"/blog/big/a-jornada-do-empreendedorismo.png"}
               alt="A jornada do empreendedorismo"
               width={719}
               height={264}
